@@ -47,7 +47,15 @@ export default function WigOnBasePage() {
   return (
     <div className={`min-h-screen bg-black text-white overflow-x-hidden pb-20 ${luckiestGuy.variable} ${fredoka.variable}`}>
       {/* Header with Contract Address - Fixed and Transparent - Mobile Responsive */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 py-2 md:py-4 px-2 md:px-4">
+      <div 
+        className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 py-2 md:py-4 px-2 md:px-4"
+        style={{
+          backgroundImage: 'url(/header-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
           {/* Mobile: Stack vertically, Desktop: Side by side */}
           
@@ -101,59 +109,19 @@ export default function WigOnBasePage() {
       </div>
 
       {/* Hero Section - Mobile Responsive */}
-      <div className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 px-4" style={{
-        backgroundImage: 'url(/blue-sunburst-bg.png)',
+      <div className="relative min-h-screen flex items-end justify-center pt-32 md:pt-28 pb-32 md:pb-24 px-4" style={{
+        backgroundImage: 'url(/header-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         
         <div className="relative z-10 text-center">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6 md:mb-8 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-4 md:mb-6 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
             $WIG
           </h1>
           
-          {/* Sloth Character - Mobile Responsive */}
-          <div className="mb-6 md:mb-8">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
-              {/* Sloth body */}
-              <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
-                {/* Face */}
-                <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
-                  {/* Eyes */}
-                  <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                    <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                      <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                    <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                      <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                    </div>
-                  </div>
-                  {/* Nose */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
-                  {/* Mouth */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
-                </div>
-                {/* Scarf */}
-                <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                  <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                  <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
-                  <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                </div>
-                {/* Shovel */}
-                <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-1 md:w-2 h-12 md:h-16 bg-gray-800 rounded-full transform rotate-45"></div>
-                <div className="absolute bottom-6 md:bottom-8 right-2 w-4 md:w-6 h-3 md:h-4 bg-blue-500 rounded transform rotate-45"></div>
-              </div>
-              {/* Name tag */}
-              <div className="absolute bottom-3 md:bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-2 md:px-3 py-1 rounded text-xs md:text-sm font-medium" style={{ fontFamily: 'var(--font-body)' }}>
-                Wig On Base
-              </div>
-            </div>
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white drop-shadow-lg px-4" style={{ fontFamily: 'var(--font-header)' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 text-white drop-shadow-lg px-4" style={{ fontFamily: 'var(--font-header)' }}>
             BACKED BY 100% PURE BASE<br />WIG ENERGY
           </h2>
         </div>
@@ -257,44 +225,13 @@ export default function WigOnBasePage() {
               </div>
             </div>
             
-            {/* Sloth with Tokenomics - Mobile Responsive */}
+            {/* BASE Character - Mobile Responsive */}
             <div className={`text-center scale-in stagger-2 ${tokenomicsAnimation.isVisible ? 'visible' : ''} mt-8 lg:mt-0`}>
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
-                <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
-                  {/* Similar sloth design but holding tokenomics paper */}
-                  <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
-                    <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
-                  </div>
-                  <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                    <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
-                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                  </div>
-                  {/* Tokenomics paper */}
-                  <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-9 md:w-12 h-12 md:h-16 bg-white rounded transform rotate-12">
-                    <div className="p-1">
-                      <div className="w-full h-1 md:h-2 bg-blue-500 rounded mb-1"></div>
-                      <div className="w-full h-0.5 md:h-1 bg-black mb-1"></div>
-                      <div className="w-full h-0.5 md:h-1 bg-black mb-1"></div>
-                      <div className="w-full h-0.5 md:h-1 bg-black"></div>
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-1 md:px-2 py-1 rounded text-xs font-medium" style={{ fontFamily: 'var(--font-body)' }}>
-                      TOKENOMICS
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/base-character.png" 
+                alt="BASE Character with Coffee" 
+                className="w-64 h-auto sm:w-72 md:w-80 lg:w-96 mx-auto hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
@@ -460,22 +397,9 @@ export default function WigOnBasePage() {
                 className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className={`slide-in-left stagger-4 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <img 
-                src="/story-14.jpg" 
-                alt="WIG Luxury Yacht Party" 
-                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
-              />
-            </div>
 
             {/* Row 5 */}
-            <div className={`slide-in-right stagger-5 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <img 
-                src="/story-15.jpg" 
-                alt="WIG Happy Face" 
-                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+            
             <div className={`slide-in-up stagger-6 ${storyAnimation.isVisible ? 'visible' : ''}`}>
               <img 
                 src="/story-16.jpg" 
@@ -494,6 +418,13 @@ export default function WigOnBasePage() {
               <img 
                 src="/story-18.jpg" 
                 alt="WIG Money Train" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-left stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-19.jpg" 
+                alt="WIG Crypto Trader" 
                 className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -518,70 +449,36 @@ export default function WigOnBasePage() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-1 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+            {/* Left side - Relaxing BASE Character */}
+            <div className={`text-center scale-in stagger-1 ${howToBuyAnimation.isVisible ? 'visible' : ''} order-2 lg:order-1`}>
+              <img 
+                src="/base-relaxing-character.png" 
+                alt="Relaxing BASE Character" 
+                className="w-64 h-auto sm:w-72 md:w-80 lg:w-96 mx-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
+            {/* Right side - Steps */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 order-1 lg:order-2">
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 1</h3>
                 <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>DOWNLOAD COINBASE WALLET</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-3 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 2</h3>
                 <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>LOAD UP ETH FROM AN EXCHANGE</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-3 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-4 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 3</h3>
                 <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>COPY THE CA</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-4 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-5 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 4</h3>
                 <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>HEAD OVER TO UNISWAP AND SWAP</p>
               </div>
-            </div>
-            
-            {/* Sloth with magic wand and charts - Mobile Responsive */}
-            <div className={`text-center relative slide-in-right stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''} mt-8 lg:mt-0`}>
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
-                <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
-                  <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
-                    <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
-                  </div>
-                  <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                    <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
-                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
-                  </div>
-                  {/* Magic wand */}
-                  <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-0.5 md:w-1 h-9 md:h-12 bg-gray-800 rounded-full transform rotate-45"></div>
-                  <div className="absolute bottom-6 md:bottom-8 right-2 w-2 md:w-3 h-2 md:h-3 bg-blue-400 rounded-full transform rotate-45"></div>
-                </div>
-              </div>
-              
-              {/* Blue candlestick charts */}
-              <div className="absolute top-0 right-0 flex gap-1">
-                <div className="w-1 md:w-2 h-6 md:h-8 bg-blue-500 rounded"></div>
-                <div className="w-1 md:w-2 h-9 md:h-12 bg-blue-500 rounded"></div>
-                <div className="w-1 md:w-2 h-4 md:h-6 bg-blue-500 rounded"></div>
-                <div className="w-1 md:w-2 h-7 md:h-10 bg-blue-500 rounded"></div>
-                <div className="w-1 md:w-2 h-3 md:h-4 bg-blue-500 rounded"></div>
-              </div>
-              
-              {/* Sparkles */}
-              <div className="absolute top-4 left-4 w-1 md:w-2 h-1 md:h-2 bg-blue-400 rounded-full"></div>
-              <div className="absolute top-8 right-8 w-2 md:w-3 h-2 md:h-3 bg-blue-400 rounded-full"></div>
-              <div className="absolute bottom-4 left-8 w-1 md:w-2 h-1 md:h-2 bg-blue-400 rounded-full"></div>
             </div>
           </div>
         </div>
