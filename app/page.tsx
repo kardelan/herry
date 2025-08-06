@@ -21,7 +21,7 @@ const fredoka = Fredoka({
 
 export default function HarrySlotherPage() {
   const [copied, setCopied] = useState(false)
-  const contractAddress = "4YVRA9KCVHVBIXC6V6ATLCODTY32KAJLD3ZAUKBZWI2N"
+  const contractAddress = "COOMING SOON"
 
   // Scroll animations
   const whyHarryAnimation = useScrollAnimation(0.2)
@@ -46,35 +46,50 @@ export default function HarrySlotherPage() {
 
   return (
     <div className={`min-h-screen bg-black text-white overflow-x-hidden pb-20 ${luckiestGuy.variable} ${fredoka.variable}`}>
-      {/* Header with Contract Address - Fixed and Transparent */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 py-4 px-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          {/* Left side - Social buttons */}
-          <div className="flex gap-4">
-            <Button className="bg-black/80 text-blue-400 hover:bg-black/90 font-semibold px-4 py-3 backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
-              X
-            </Button>
-            <Button className="bg-blue-500/80 text-white hover:bg-blue-400/90 font-semibold px-4 py-3 backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
-              TG
-            </Button>
+      {/* Header with Contract Address - Fixed and Transparent - Mobile Responsive */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 py-2 md:py-4 px-2 md:px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+          {/* Mobile: Stack vertically, Desktop: Side by side */}
+          
+          {/* Top row on mobile: Social buttons and Buy buttons */}
+          <div className="flex items-center justify-between w-full md:w-auto">
+            {/* Left side - Social buttons */}
+            <div className="flex gap-2 md:gap-4">
+              <Button className="bg-black/80 text-blue-400 hover:bg-black/90 font-semibold px-2 py-2 md:px-4 md:py-3 backdrop-blur-sm text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>
+                X
+              </Button>
+              <Button className="bg-blue-500/80 text-white hover:bg-blue-400/90 font-semibold px-2 py-2 md:px-4 md:py-3 backdrop-blur-sm text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>
+                TG
+              </Button>
+            </div>
+            
+            {/* Right side - Buy button (visible on mobile) */}
+            <div className="flex gap-2 md:hidden">
+              <Button className="bg-black/80 text-white hover:bg-black/90 font-semibold px-3 py-2 backdrop-blur-sm text-sm" style={{ fontFamily: 'var(--font-body)' }}>
+                BUY HARRY
+              </Button>
+              <Button className="bg-black/80 text-white hover:bg-black/90 p-2 font-semibold backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
+                <ExternalLink className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
           
           {/* Center - Contract Address */}
-          <div className="bg-white/90 backdrop-blur-sm text-black px-6 py-3 rounded-lg flex items-center gap-4">
-            <span className="font-medium text-sm md:text-base break-all" style={{ fontFamily: 'var(--font-body)' }}>
+          <div className="bg-white/90 backdrop-blur-sm text-black px-3 py-2 md:px-6 md:py-3 rounded-lg flex items-center gap-2 md:gap-4 w-full md:w-auto">
+            <span className="font-medium text-xs md:text-base" style={{ fontFamily: 'var(--font-body)' }}>
               CA: {contractAddress}
             </span>
             <Button
               onClick={copyToClipboard}
-              className="bg-black text-white hover:bg-gray-800 px-4 py-2 text-sm font-semibold"
+              className="bg-black text-white hover:bg-gray-800 px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-semibold flex-shrink-0"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               {copied ? "COPIED!" : "COPY"}
             </Button>
           </div>
           
-          {/* Right side - Buy button */}
-          <div className="flex gap-4">
+          {/* Right side - Buy button (hidden on mobile, visible on desktop) */}
+          <div className="hidden md:flex gap-4">
             <Button className="bg-black/80 text-white hover:bg-black/90 font-semibold px-6 py-3 backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
               BUY HARRY
             </Button>
@@ -85,60 +100,60 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center pt-20" style={{
+      {/* Hero Section - Mobile Responsive */}
+      <div className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 px-4" style={{
         backgroundImage: 'url(/blue-sunburst-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-8xl md:text-9xl mb-8 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
+        <div className="relative z-10 text-center">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6 md:mb-8 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
             $HARRY
           </h1>
           
-          {/* Sloth Character */}
-          <div className="mb-8">
-            <div className="w-64 h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
+          {/* Sloth Character - Mobile Responsive */}
+          <div className="mb-6 md:mb-8">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
               {/* Sloth body */}
-              <div className="w-48 h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
+              <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
                 {/* Face */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
+                <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
                   {/* Eyes */}
-                  <div className="absolute top-4 left-4 w-8 h-8 bg-white rounded-full">
-                    <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                      <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                    <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                      <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full">
-                    <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                      <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                    <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                      <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                     </div>
                   </div>
                   {/* Nose */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-3 bg-gray-800 rounded-full"></div>
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
                   {/* Mouth */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-black rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
                 </div>
                 {/* Scarf */}
-                <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-40 h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                  <div className="w-full h-2 bg-white mt-1"></div>
-                  <div className="w-full h-2 bg-blue-600 mt-1"></div>
-                  <div className="w-full h-2 bg-white mt-1"></div>
+                <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
+                  <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
+                  <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
+                  <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
                 </div>
                 {/* Shovel */}
-                <div className="absolute bottom-4 right-4 w-2 h-16 bg-gray-800 rounded-full transform rotate-45"></div>
-                <div className="absolute bottom-8 right-2 w-6 h-4 bg-blue-500 rounded transform rotate-45"></div>
+                <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-1 md:w-2 h-12 md:h-16 bg-gray-800 rounded-full transform rotate-45"></div>
+                <div className="absolute bottom-6 md:bottom-8 right-2 w-4 md:w-6 h-3 md:h-4 bg-blue-500 rounded transform rotate-45"></div>
               </div>
               {/* Name tag */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-3 py-1 rounded text-sm font-medium" style={{ fontFamily: 'var(--font-body)' }}>
+              <div className="absolute bottom-3 md:bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-2 md:px-3 py-1 rounded text-xs md:text-sm font-medium" style={{ fontFamily: 'var(--font-body)' }}>
                 Harry Slother
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl mb-4 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white drop-shadow-lg px-4" style={{ fontFamily: 'var(--font-header)' }}>
             BACKED BY 100% PURE HOGWARTS<br />HARRY ENERGY
           </h2>
         </div>
@@ -149,69 +164,69 @@ export default function HarrySlotherPage() {
             onClick={scrollToNextSection}
             className="flex flex-col items-center text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer group"
           >
-            <span className="text-lg font-medium mb-2 animate-pulse" style={{ fontFamily: 'var(--font-body)' }}>
+            <span className="text-sm md:text-lg font-medium mb-2 animate-pulse" style={{ fontFamily: 'var(--font-body)' }}>
               SCROLL DOWN
             </span>
             <div className="animate-bounce">
-              <ChevronDown className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
+              <ChevronDown className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform duration-300" />
             </div>
           </button>
         </div>
       </div>
 
-      {/* Why Harry Section */}
-      <div id="why-harry-section" className="bg-black py-16 px-4">
+      {/* Why Harry Section - Mobile Responsive */}
+      <div id="why-harry-section" className="bg-black py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div ref={whyHarryAnimation.ref} className={`fade-in ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-            <h2 className="text-6xl md:text-7xl mb-4 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 text-white" style={{ fontFamily: 'var(--font-header)' }}>
               WHY HARRY?
             </h2>
-            <p className="text-2xl md:text-3xl font-medium mb-12 text-gray-300" style={{ fontFamily: 'var(--font-body)' }}>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-8 md:mb-12 text-gray-300 px-4" style={{ fontFamily: 'var(--font-body)' }}>
               NOT FINANCIAL ADVICE, JUST VIBES
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-left stagger-1 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-1 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 UTILITIES = NONE
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg scale-in stagger-2 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg scale-in stagger-2 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 ROADMAP = GRYFFINDOR
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-right stagger-3 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-3 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 TEAM=PROBABLY NUTS
               </h3>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-left stagger-4 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12 max-w-4xl mx-auto">
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-4 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 ENERGY = NUCLEAR
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-right stagger-5 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-5 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 COMMUNITY = HOGWARTS
               </h3>
             </div>
           </div>
 
           <div className={`fade-in stagger-6 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
-            <Button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold text-xl px-12 py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
+            <Button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
               YOU NEED THIS IN YOUR WALLET
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Sacred Magic Scroll Section */}
-      <div className="bg-gradient-to-br from-blue-400 to-blue-600 py-16 px-4" style={{
+      {/* Sacred Magic Scroll Section - Mobile Responsive */}
+      <div className="bg-gradient-to-br from-blue-400 to-blue-600 py-12 md:py-16 px-4" style={{
         backgroundImage: 'url(/blue-sunburst-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -219,62 +234,62 @@ export default function HarrySlotherPage() {
       }}>
         <div className="max-w-6xl mx-auto">
           <div ref={tokenomicsAnimation.ref} className={`fade-in ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
-            <h2 className="text-5xl md:text-6xl text-center mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
               THE SACRED<br />MAGIC SCROLL
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className={`bg-black text-white p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-1 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>SUPPLY</h3>
-                <p className="text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>1 BILLION</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6">
+              <div className={`bg-black text-white p-4 md:p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-1 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>SUPPLY</h3>
+                <p className="text-xl md:text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>1 BILLION</p>
               </div>
               
-              <div className={`bg-black text-white p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-2 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>TAX</h3>
-                <p className="text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>0% IN 0% OUT, 100% INSANITY</p>
+              <div className={`bg-black text-white p-4 md:p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-2 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>TAX</h3>
+                <p className="text-lg md:text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>0% IN 0% OUT, 100% INSANITY</p>
               </div>
               
-              <div className={`bg-black text-white p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-3 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>LIQUIDITY</h3>
-                <p className="text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>TIGHTER THAN SLOTH'S GRIP</p>
+              <div className={`bg-black text-white p-4 md:p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-3 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>LIQUIDITY</h3>
+                <p className="text-lg md:text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>TIGHTER THAN SLOTH'S GRIP</p>
               </div>
             </div>
             
-            {/* Sloth with Tokenomics */}
-            <div className={`text-center scale-in stagger-2 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
-              <div className="w-64 h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
-                <div className="w-48 h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
+            {/* Sloth with Tokenomics - Mobile Responsive */}
+            <div className={`text-center scale-in stagger-2 ${tokenomicsAnimation.isVisible ? 'visible' : ''} mt-8 lg:mt-0`}>
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
+                <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
                   {/* Similar sloth design but holding tokenomics paper */}
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
-                    <div className="absolute top-4 left-4 w-8 h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
+                    <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+                    <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                       </div>
                     </div>
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-3 bg-gray-800 rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-black rounded-full"></div>
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
                   </div>
-                  <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-40 h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                    <div className="w-full h-2 bg-white mt-1"></div>
-                    <div className="w-full h-2 bg-blue-600 mt-1"></div>
-                    <div className="w-full h-2 bg-white mt-1"></div>
+                  <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
+                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
+                    <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
+                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
                   </div>
                   {/* Tokenomics paper */}
-                  <div className="absolute bottom-4 right-4 w-12 h-16 bg-white rounded transform rotate-12">
+                  <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-9 md:w-12 h-12 md:h-16 bg-white rounded transform rotate-12">
                     <div className="p-1">
-                      <div className="w-full h-2 bg-blue-500 rounded mb-1"></div>
-                      <div className="w-full h-1 bg-black mb-1"></div>
-                      <div className="w-full h-1 bg-black mb-1"></div>
-                      <div className="w-full h-1 bg-black"></div>
+                      <div className="w-full h-1 md:h-2 bg-blue-500 rounded mb-1"></div>
+                      <div className="w-full h-0.5 md:h-1 bg-black mb-1"></div>
+                      <div className="w-full h-0.5 md:h-1 bg-black mb-1"></div>
+                      <div className="w-full h-0.5 md:h-1 bg-black"></div>
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs font-medium" style={{ fontFamily: 'var(--font-body)' }}>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-1 md:px-2 py-1 rounded text-xs font-medium" style={{ fontFamily: 'var(--font-body)' }}>
                       TOKENOMICS
                     </div>
                   </div>
@@ -285,41 +300,41 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Harry Bible Section */}
-      <div className="bg-black py-16 px-4">
+      {/* Harry Bible Section - Mobile Responsive */}
+      <div className="bg-black py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div ref={bibleAnimation.ref} className={`fade-in ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-            <h2 className="text-5xl md:text-6xl mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
               THE HARRY BIBLE
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-left stagger-1 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-1 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 DON'T SELL
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg scale-in stagger-2 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg scale-in stagger-2 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 DON'T ASK FOR UTILITY
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-right stagger-3 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-3 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 DON'T QUESTION HARRY
               </h3>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-left stagger-4 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12 md:mb-16 max-w-4xl mx-auto">
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-4 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 WORSHIP THE GREEN
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-6 rounded-lg slide-in-right stagger-5 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-5 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 IF IN DOUBT, BUY MORE
               </h3>
             </div>
@@ -327,44 +342,44 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Story Cards Section */}
-      <div className="bg-gradient-to-br from-blue-400 to-blue-600 py-16 px-4" style={{
+      {/* Story Cards Section - Mobile Responsive */}
+      <div className="bg-gradient-to-br from-blue-400 to-blue-600 py-12 md:py-16 px-4" style={{
         backgroundImage: 'url(/blue-sunburst-story-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="max-w-6xl mx-auto">
-          <div ref={storyAnimation.ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className={`bg-white border-4 border-blue-500 p-6 slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
+          <div ref={storyAnimation.ref} className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
                 LEGEND SAYS HE KILLED A BEAR WITH A MEGA CANDLESTICK..
               </h3>
-              <div className="bg-blue-500 h-32 rounded-lg mb-4 relative">
+              <div className="bg-blue-500 h-24 md:h-32 rounded-lg mb-4 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-gray-600 rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
                 </div>
               </div>
             </Card>
             
-            <Card className={`bg-white border-4 border-blue-500 p-6 scale-in stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
+            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 scale-in stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
                 OTHERS SAY HE WAITED THREE WEEKS WITHOUT BLINKING...
               </h3>
-              <div className="bg-black h-32 rounded-lg mb-4 relative">
+              <div className="bg-black h-24 md:h-32 rounded-lg mb-4 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-gray-600 rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
                 </div>
               </div>
             </Card>
             
-            <Card className={`bg-white border-4 border-blue-500 p-6 slide-in-right stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
+            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 slide-in-right stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
                 ALL WE KNOW IS... HE'S HERE NOW!
               </h3>
-              <div className="bg-blue-400 h-32 rounded-lg mb-4 relative">
+              <div className="bg-blue-400 h-24 md:h-32 rounded-lg mb-4 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-gray-600 rounded-full"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
                 </div>
               </div>
             </Card>
@@ -372,96 +387,96 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* How to Buy Section */}
-      <div className="bg-black py-16 px-4">
+      {/* How to Buy Section - Mobile Responsive */}
+      <div className="bg-black py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div ref={howToBuyAnimation.ref} className={`fade-in ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-            <h2 className="text-5xl md:text-6xl text-center mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
               HOW TO BUY?
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-6">
-              <div className={`bg-white text-blue-600 p-6 rounded-lg border-4 border-blue-500 scale-in stagger-1 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 1</h3>
-                <p className="font-medium" style={{ fontFamily: 'var(--font-body)' }}>DOWNLOAD PHANTOM WALLET</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-1 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 1</h3>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>DOWNLOAD PHANTOM WALLET</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-6 rounded-lg border-4 border-blue-500 scale-in stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 2</h3>
-                <p className="font-medium" style={{ fontFamily: 'var(--font-body)' }}>LOAD UP SOL FROM AN EXCHANGE</p>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 2</h3>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>LOAD UP SOL FROM AN EXCHANGE</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-6 rounded-lg border-4 border-blue-500 scale-in stagger-3 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 3</h3>
-                <p className="font-medium" style={{ fontFamily: 'var(--font-body)' }}>COPY THE CA</p>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-3 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 3</h3>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>COPY THE CA</p>
               </div>
               
-              <div className={`bg-white text-blue-600 p-6 rounded-lg border-4 border-blue-500 scale-in stagger-4 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-                <h3 className="text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 4</h3>
-                <p className="font-medium" style={{ fontFamily: 'var(--font-body)' }}>HEAD OVER TO JUPITER AND SWAP</p>
+              <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-4 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
+                <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 4</h3>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>HEAD OVER TO JUPITER AND SWAP</p>
               </div>
             </div>
             
-            {/* Sloth with magic wand and charts */}
-            <div className={`text-center relative slide-in-right stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
-              <div className="w-64 h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
-                <div className="w-48 h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
-                    <div className="absolute top-4 left-4 w-8 h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+            {/* Sloth with magic wand and charts - Mobile Responsive */}
+            <div className={`text-center relative slide-in-right stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''} mt-8 lg:mt-0`}>
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center relative">
+                <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-48 md:h-48 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full relative">
+                  <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-18 md:h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full">
+                    <div className="absolute top-3 md:top-4 left-3 md:left-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full">
-                      <div className="absolute top-1 left-1 w-6 h-6 bg-black rounded-full">
-                        <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"></div>
+                    <div className="absolute top-3 md:top-4 right-3 md:right-4 w-6 md:w-8 h-6 md:h-8 bg-white rounded-full">
+                      <div className="absolute top-1 left-1 w-4 md:w-6 h-4 md:h-6 bg-black rounded-full">
+                        <div className="absolute top-1 left-1 w-1 md:w-2 h-1 md:h-2 bg-white rounded-full"></div>
                       </div>
                     </div>
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-3 bg-gray-800 rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-black rounded-full"></div>
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3 md:w-4 h-2 md:h-3 bg-gray-800 rounded-full"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-black rounded-full"></div>
                   </div>
-                  <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-40 h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
-                    <div className="w-full h-2 bg-white mt-1"></div>
-                    <div className="w-full h-2 bg-blue-600 mt-1"></div>
-                    <div className="w-full h-2 bg-white mt-1"></div>
+                  <div className="absolute top-15 md:top-20 left-1/2 transform -translate-x-1/2 w-30 md:w-40 h-6 md:h-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg">
+                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
+                    <div className="w-full h-1 md:h-2 bg-blue-600 mt-1"></div>
+                    <div className="w-full h-1 md:h-2 bg-white mt-1"></div>
                   </div>
                   {/* Magic wand */}
-                  <div className="absolute bottom-4 right-4 w-1 h-12 bg-gray-800 rounded-full transform rotate-45"></div>
-                  <div className="absolute bottom-8 right-2 w-3 h-3 bg-blue-400 rounded-full transform rotate-45"></div>
+                  <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 w-0.5 md:w-1 h-9 md:h-12 bg-gray-800 rounded-full transform rotate-45"></div>
+                  <div className="absolute bottom-6 md:bottom-8 right-2 w-2 md:w-3 h-2 md:h-3 bg-blue-400 rounded-full transform rotate-45"></div>
                 </div>
               </div>
               
               {/* Blue candlestick charts */}
               <div className="absolute top-0 right-0 flex gap-1">
-                <div className="w-2 h-8 bg-blue-500 rounded"></div>
-                <div className="w-2 h-12 bg-blue-500 rounded"></div>
-                <div className="w-2 h-6 bg-blue-500 rounded"></div>
-                <div className="w-2 h-10 bg-blue-500 rounded"></div>
-                <div className="w-2 h-4 bg-blue-500 rounded"></div>
+                <div className="w-1 md:w-2 h-6 md:h-8 bg-blue-500 rounded"></div>
+                <div className="w-1 md:w-2 h-9 md:h-12 bg-blue-500 rounded"></div>
+                <div className="w-1 md:w-2 h-4 md:h-6 bg-blue-500 rounded"></div>
+                <div className="w-1 md:w-2 h-7 md:h-10 bg-blue-500 rounded"></div>
+                <div className="w-1 md:w-2 h-3 md:h-4 bg-blue-500 rounded"></div>
               </div>
               
               {/* Sparkles */}
-              <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full"></div>
-              <div className="absolute top-8 right-8 w-3 h-3 bg-blue-400 rounded-full"></div>
-              <div className="absolute bottom-4 left-8 w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="absolute top-4 left-4 w-1 md:w-2 h-1 md:h-2 bg-blue-400 rounded-full"></div>
+              <div className="absolute top-8 right-8 w-2 md:w-3 h-2 md:h-3 bg-blue-400 rounded-full"></div>
+              <div className="absolute bottom-4 left-8 w-1 md:w-2 h-1 md:h-2 bg-blue-400 rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Final CTA Section */}
-      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 py-16 px-4" style={{
+      {/* Final CTA Section - Mobile Responsive */}
+      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 py-12 md:py-16 px-4" style={{
         backgroundImage: 'url(/blue-sunburst-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="max-w-6xl mx-auto text-center">
-          <div ref={ctaAnimation.ref} className="mb-12">
+          <div ref={ctaAnimation.ref} className="mb-8 md:mb-12">
             <div className={`fade-in ${ctaAnimation.isVisible ? 'visible' : ''}`}>
-              <h2 className="text-4xl md:text-5xl mb-8 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 THIS ISN'T A TOKEN<br />
                 THIS ISN'T A MEME<br />
                 THIS ISN'T A CULT<br />
@@ -469,28 +484,28 @@ export default function HarrySlotherPage() {
               </h2>
             </div>
             
-            <div className={`flex justify-center gap-4 mb-8 scale-in stagger-2 ${ctaAnimation.isVisible ? 'visible' : ''}`}>
-              <Button className="bg-black text-blue-400 hover:bg-gray-800 font-semibold px-6 py-3 text-xl" style={{ fontFamily: 'var(--font-body)' }}>
+            <div className={`flex justify-center gap-3 md:gap-4 mb-6 md:mb-8 scale-in stagger-2 ${ctaAnimation.isVisible ? 'visible' : ''}`}>
+              <Button className="bg-black text-blue-400 hover:bg-gray-800 font-semibold px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl" style={{ fontFamily: 'var(--font-body)' }}>
                 X
               </Button>
-              <Button className="bg-blue-500 text-white hover:bg-blue-400 font-semibold px-6 py-3 text-xl" style={{ fontFamily: 'var(--font-body)' }}>
+              <Button className="bg-blue-500 text-white hover:bg-blue-400 font-semibold px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl" style={{ fontFamily: 'var(--font-body)' }}>
                 TG
               </Button>
             </div>
           </div>
           
           <div className={`fade-in stagger-3 ${ctaAnimation.isVisible ? 'visible' : ''}`}>
-            <Button className="bg-black text-blue-400 hover:bg-gray-800 font-semibold text-2xl px-12 py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
+            <Button className="bg-black text-blue-400 hover:bg-gray-800 font-semibold text-lg md:text-2xl px-8 md:px-12 py-4 md:py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
               GO BUY HARRY NOW!
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Running Text at Bottom - Fixed and Transparent */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-blue-500/20 backdrop-blur-sm border-t border-white/10 py-4 overflow-hidden whitespace-nowrap">
+      {/* Running Text at Bottom - Fixed and Transparent - Mobile Responsive */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-blue-500/20 backdrop-blur-sm border-t border-white/10 py-2 md:py-4 overflow-hidden whitespace-nowrap">
         <div className="animate-marquee inline-block">
-          <span className="text-white text-2xl font-bold mx-8" style={{ fontFamily: 'var(--font-header)' }}>
+          <span className="text-white text-lg md:text-2xl font-bold mx-4 md:mx-8" style={{ fontFamily: 'var(--font-header)' }}>
             $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE •
           </span>
         </div>
