@@ -19,12 +19,12 @@ const fredoka = Fredoka({
   variable: '--font-body',
 })
 
-export default function HarrySlotherPage() {
+export default function WigOnBasePage() {
   const [copied, setCopied] = useState(false)
   const contractAddress = "COOMING SOON"
 
   // Scroll animations
-  const whyHarryAnimation = useScrollAnimation(0.2)
+  const whyWigAnimation = useScrollAnimation(0.2)
   const tokenomicsAnimation = useScrollAnimation(0.2)
   const bibleAnimation = useScrollAnimation(0.2)
   const storyAnimation = useScrollAnimation(0.2)
@@ -38,7 +38,7 @@ export default function HarrySlotherPage() {
   }
 
   const scrollToNextSection = () => {
-    const nextSection = document.querySelector('#why-harry-section')
+    const nextSection = document.querySelector('#why-wig-section')
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' })
     }
@@ -66,7 +66,7 @@ export default function HarrySlotherPage() {
             {/* Right side - Buy button (visible on mobile) */}
             <div className="flex gap-2 md:hidden">
               <Button className="bg-black/80 text-white hover:bg-black/90 font-semibold px-3 py-2 backdrop-blur-sm text-sm" style={{ fontFamily: 'var(--font-body)' }}>
-                BUY HARRY
+                BUY WIG
               </Button>
               <Button className="bg-black/80 text-white hover:bg-black/90 p-2 font-semibold backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
                 <ExternalLink className="w-4 h-4" />
@@ -91,7 +91,7 @@ export default function HarrySlotherPage() {
           {/* Right side - Buy button (hidden on mobile, visible on desktop) */}
           <div className="hidden md:flex gap-4">
             <Button className="bg-black/80 text-white hover:bg-black/90 font-semibold px-6 py-3 backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
-              BUY HARRY
+              BUY WIG
             </Button>
             <Button className="bg-black/80 text-white hover:bg-black/90 p-3 font-semibold backdrop-blur-sm" style={{ fontFamily: 'var(--font-body)' }}>
               <ExternalLink className="w-5 h-5" />
@@ -110,7 +110,7 @@ export default function HarrySlotherPage() {
         
         <div className="relative z-10 text-center">
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6 md:mb-8 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
-            $HARRY
+            $WIG
           </h1>
           
           {/* Sloth Character - Mobile Responsive */}
@@ -148,13 +148,13 @@ export default function HarrySlotherPage() {
               </div>
               {/* Name tag */}
               <div className="absolute bottom-3 md:bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-2 md:px-3 py-1 rounded text-xs md:text-sm font-medium" style={{ fontFamily: 'var(--font-body)' }}>
-                Harry Slother
+                Wig On Base
               </div>
             </div>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white drop-shadow-lg px-4" style={{ fontFamily: 'var(--font-header)' }}>
-            BACKED BY 100% PURE HOGWARTS<br />HARRY ENERGY
+            BACKED BY 100% PURE BASE<br />WIG ENERGY
           </h2>
         </div>
 
@@ -174,12 +174,12 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Why Harry Section - Mobile Responsive */}
-      <div id="why-harry-section" className="bg-black py-12 md:py-16 px-4">
+      {/* Why Wig Section - Mobile Responsive */}
+      <div id="why-wig-section" className="bg-black py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div ref={whyHarryAnimation.ref} className={`fade-in ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+          <div ref={whyWigAnimation.ref} className={`fade-in ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 text-white" style={{ fontFamily: 'var(--font-header)' }}>
-              WHY HARRY?
+              WHY WIG?
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-8 md:mb-12 text-gray-300 px-4" style={{ fontFamily: 'var(--font-body)' }}>
               NOT FINANCIAL ADVICE, JUST VIBES
@@ -187,17 +187,17 @@ export default function HarrySlotherPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
-            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-1 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-1 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 UTILITIES = NONE
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg scale-in stagger-2 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg scale-in stagger-2 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
-                ROADMAP = GRYFFINDOR
+                ROADMAP = BASE CHAIN
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-3 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-3 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 TEAM=PROBABLY NUTS
               </h3>
@@ -205,19 +205,19 @@ export default function HarrySlotherPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12 max-w-4xl mx-auto">
-            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-4 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-left stagger-4 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
                 ENERGY = NUCLEAR
               </h3>
             </div>
-            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-5 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+            <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-5 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
-                COMMUNITY = HOGWARTS
+                COMMUNITY = BASE BUILDERS
               </h3>
             </div>
           </div>
 
-          <div className={`fade-in stagger-6 ${whyHarryAnimation.isVisible ? 'visible' : ''}`}>
+          <div className={`fade-in stagger-6 ${whyWigAnimation.isVisible ? 'visible' : ''}`}>
             <Button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
               YOU NEED THIS IN YOUR WALLET
             </Button>
@@ -235,7 +235,7 @@ export default function HarrySlotherPage() {
         <div className="max-w-6xl mx-auto">
           <div ref={tokenomicsAnimation.ref} className={`fade-in ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
-              THE SACRED<br />MAGIC SCROLL
+              THE SACRED<br />WIG SCROLL
             </h2>
           </div>
           
@@ -253,7 +253,7 @@ export default function HarrySlotherPage() {
               
               <div className={`bg-black text-white p-4 md:p-6 rounded-lg border-4 border-blue-500 slide-in-left stagger-3 ${tokenomicsAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>LIQUIDITY</h3>
-                <p className="text-lg md:text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>TIGHTER THAN SLOTH'S GRIP</p>
+                <p className="text-lg md:text-2xl font-medium" style={{ fontFamily: 'var(--font-body)' }}>TIGHTER THAN WIG'S GRIP</p>
               </div>
             </div>
             
@@ -300,12 +300,12 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Harry Bible Section - Mobile Responsive */}
+      {/* Wig Bible Section - Mobile Responsive */}
       <div className="bg-black py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div ref={bibleAnimation.ref} className={`fade-in ${bibleAnimation.isVisible ? 'visible' : ''}`}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-header)' }}>
-              THE HARRY BIBLE
+              THE WIG BIBLE
             </h2>
           </div>
           
@@ -322,7 +322,7 @@ export default function HarrySlotherPage() {
             </div>
             <div className={`border-4 border-blue-500 bg-black p-4 md:p-6 rounded-lg slide-in-right stagger-3 ${bibleAnimation.isVisible ? 'visible' : ''}`}>
               <h3 className="text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: 'var(--font-header)' }}>
-                DON'T QUESTION HARRY
+                DON'T QUESTION WIG
               </h3>
             </div>
           </div>
@@ -342,7 +342,7 @@ export default function HarrySlotherPage() {
         </div>
       </div>
 
-      {/* Story Cards Section - Mobile Responsive */}
+      {/* WIG Legend Gallery Section - Mobile Responsive */}
       <div className="bg-gradient-to-br from-blue-400 to-blue-600 py-12 md:py-16 px-4" style={{
         backgroundImage: 'url(/blue-sunburst-story-bg.png)',
         backgroundSize: 'cover',
@@ -350,39 +350,160 @@ export default function HarrySlotherPage() {
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="max-w-6xl mx-auto">
-          <div ref={storyAnimation.ref} className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
-                LEGEND SAYS HE KILLED A BEAR WITH A MEGA CANDLESTICK..
-              </h3>
-              <div className="bg-blue-500 h-24 md:h-32 rounded-lg mb-4 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
-                </div>
-              </div>
-            </Card>
+          <div ref={storyAnimation.ref} className={`text-center mb-8 md:mb-12 fade-in ${storyAnimation.isVisible ? 'visible' : ''}`}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 text-white" style={{ fontFamily: 'var(--font-header)' }}>
+              THE WIG LEGEND
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-white font-medium px-4" style={{ fontFamily: 'var(--font-body)' }}>
+              LEGENDS SAY HE BUILT ON BASE WITH A MEGA WIG...<br />
+              OTHERS SAY HE CODED THREE WEEKS WITHOUT SLEEPING...<br />
+              ALL WE KNOW IS... WIG IS HERE NOW!
+            </p>
+          </div>
+          
+          {/* Meme Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {/* Row 1 */}
+            <div className={`slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-1.jpg" 
+                alt="WIG Success Story" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-up stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-2.jpg" 
+                alt="WIG Meme Culture" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-right stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-3.jpg" 
+                alt="WIG Trading Power" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-left stagger-4 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-4.jpg" 
+                alt="WIG Market Moves" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
             
-            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 scale-in stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
-                OTHERS SAY HE WAITED THREE WEEKS WITHOUT BLINKING...
-              </h3>
-              <div className="bg-black h-24 md:h-32 rounded-lg mb-4 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
-                </div>
-              </div>
-            </Card>
+            {/* Row 2 */}
+            <div className={`slide-in-right stagger-5 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-5.jpg" 
+                alt="WIG Identity" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-up stagger-6 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-6.jpg" 
+                alt="WIG To The Moon" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-7.jpg" 
+                alt="WIG Base Lifestyle" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-right stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-8.jpg" 
+                alt="WIG Whale Power" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
             
-            <Card className={`bg-white border-4 border-blue-500 p-4 md:p-6 slide-in-right stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
-              <h3 className="text-lg md:text-xl text-center mb-4 text-black" style={{ fontFamily: 'var(--font-header)' }}>
-                ALL WE KNOW IS... HE'S HERE NOW!
-              </h3>
-              <div className="bg-blue-400 h-24 md:h-32 rounded-lg mb-4 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600 rounded-full"></div>
-                </div>
-              </div>
-            </Card>
+            {/* Row 3 - Last two images spanning wider */}
+            <div className={`sm:col-span-2 slide-in-up stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-9.jpg" 
+                alt="WIG Airdrop Party" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`sm:col-span-2 scale-in stagger-4 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-10.jpg" 
+                alt="WIG Community Gathering" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            {/* Row 4 - New additions */}
+            <div className={`slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-11.jpg" 
+                alt="WIG Self Reflection" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-up stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-12.jpg" 
+                alt="WIG Space Mission" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-right stagger-3 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-13.jpg" 
+                alt="WIG Wealth Distribution" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-left stagger-4 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-14.jpg" 
+                alt="WIG Luxury Yacht Party" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Row 5 */}
+            <div className={`slide-in-right stagger-5 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-15.jpg" 
+                alt="WIG Happy Face" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-up stagger-6 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-16.jpg" 
+                alt="WIG Comfy Life" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-left stagger-1 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-17.jpg" 
+                alt="WIG Yacht Celebration" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className={`slide-in-right stagger-2 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+              <img 
+                src="/story-18.jpg" 
+                alt="WIG Money Train" 
+                className="w-full h-48 md:h-56 object-cover rounded-lg border-4 border-blue-500 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+          
+          {/* Closing Text */}
+          <div className={`text-center mt-8 md:mt-12 fade-in stagger-5 ${storyAnimation.isVisible ? 'visible' : ''}`}>
+            <p className="text-xl sm:text-2xl md:text-3xl text-white font-bold" style={{ fontFamily: 'var(--font-header)' }}>
+              THE LEGEND CONTINUES ON BASE...
+            </p>
           </div>
         </div>
       </div>
@@ -400,12 +521,12 @@ export default function HarrySlotherPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-1 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 1</h3>
-                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>DOWNLOAD PHANTOM WALLET</p>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>DOWNLOAD COINBASE WALLET</p>
               </div>
               
               <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-2 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 2</h3>
-                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>LOAD UP SOL FROM AN EXCHANGE</p>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>LOAD UP ETH FROM AN EXCHANGE</p>
               </div>
               
               <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-3 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
@@ -415,7 +536,7 @@ export default function HarrySlotherPage() {
               
               <div className={`bg-white text-blue-600 p-4 md:p-6 rounded-lg border-4 border-blue-500 scale-in stagger-4 ${howToBuyAnimation.isVisible ? 'visible' : ''}`}>
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-header)' }}>STEP 4</h3>
-                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>HEAD OVER TO JUPITER AND SWAP</p>
+                <p className="font-medium text-sm md:text-base" style={{ fontFamily: 'var(--font-body)' }}>HEAD OVER TO UNISWAP AND SWAP</p>
               </div>
             </div>
             
@@ -480,7 +601,7 @@ export default function HarrySlotherPage() {
                 THIS ISN'T A TOKEN<br />
                 THIS ISN'T A MEME<br />
                 THIS ISN'T A CULT<br />
-                THIS IS HARRY!
+                THIS IS WIG!
               </h2>
             </div>
             
@@ -496,7 +617,7 @@ export default function HarrySlotherPage() {
           
           <div className={`fade-in stagger-3 ${ctaAnimation.isVisible ? 'visible' : ''}`}>
             <Button className="bg-black text-blue-400 hover:bg-gray-800 font-semibold text-lg md:text-2xl px-8 md:px-12 py-4 md:py-6 rounded-lg" style={{ fontFamily: 'var(--font-body)' }}>
-              GO BUY HARRY NOW!
+              GO BUY WIG NOW!
             </Button>
           </div>
         </div>
@@ -506,7 +627,7 @@ export default function HarrySlotherPage() {
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-blue-500/20 backdrop-blur-sm border-t border-white/10 py-2 md:py-4 overflow-hidden whitespace-nowrap">
         <div className="animate-marquee inline-block">
           <span className="text-white text-lg md:text-2xl font-bold mx-4 md:mx-8" style={{ fontFamily: 'var(--font-header)' }}>
-            $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE •
+            $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG • $WIG •
           </span>
         </div>
       </div>
