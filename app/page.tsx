@@ -109,21 +109,33 @@ export default function WigOnBasePage() {
       </div>
 
       {/* Hero Section - Mobile Responsive */}
-      <div className="relative min-h-screen flex items-end justify-center pt-32 md:pt-28 pb-32 md:pb-24 px-4" style={{
+      <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 md:pt-28 pb-32 md:pb-24 px-4" style={{
         backgroundImage: 'url(/header-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-4 md:mb-6 text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
-            $WIG
-          </h1>
+        <div className="relative z-10 text-center flex flex-col items-center justify-center space-y-6 md:space-y-8">
+          {/* Character Image - Centered and Properly Sized */}
+          <div className="mb-4 md:mb-6">
+            <img 
+              src="/header-bg.png" 
+              alt="WIG Character" 
+              className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain mx-auto hover:scale-105 transition-transform duration-300"
+            />
+          </div>
           
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 text-white drop-shadow-lg px-4" style={{ fontFamily: 'var(--font-header)' }}>
-            BACKED BY 100% PURE BASE<br />WIG ENERGY
-          </h2>
+          {/* Text Content - Centered Below Character */}
+          <div className="space-y-4 md:space-y-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-header)' }}>
+              $WIG
+            </h1>
+            
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white drop-shadow-lg px-4 max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-header)' }}>
+              BACKED BY 100% PURE BASE<br />WIG ENERGY
+            </h2>
+          </div>
         </div>
 
         {/* Scroll Down Animation */}
