@@ -45,7 +45,7 @@ export default function HarrySlotherPage() {
   }
 
   return (
-    <div className={`min-h-screen bg-black text-white overflow-x-hidden ${luckiestGuy.variable} ${fredoka.variable}`}>
+    <div className={`min-h-screen bg-black text-white overflow-x-hidden pb-20 ${luckiestGuy.variable} ${fredoka.variable}`}>
       {/* Header with Contract Address - Fixed and Transparent */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 py-4 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -484,6 +484,15 @@ export default function HarrySlotherPage() {
               GO BUY HARRY NOW!
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Running Text at Bottom - Fixed and Transparent */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-blue-500/20 backdrop-blur-sm border-t border-white/10 py-4 overflow-hidden whitespace-nowrap">
+        <div className="animate-marquee inline-block">
+          <span className="text-white text-2xl font-bold mx-8" style={{ fontFamily: 'var(--font-header)' }}>
+            $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE • $KARAKE •
+          </span>
         </div>
       </div>
     </div>
